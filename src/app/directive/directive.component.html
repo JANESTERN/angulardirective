@@ -1,0 +1,43 @@
+<!-- 
+<div class="notice" *ngIf="display; else readmore">
+    <h2>Thank you for wanting to know more</h2>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis animi possimus delectus suscipit sed porro, eaque nam quasi reiciendis facere, provident soluta ex officiis sequi labore fuga, ducimus accusantium eveniet asperiores deleniti dolorum beatae est rerum. Culpa, in repellendus voluptatum, facere quaerat suscipit quas tenetur quae soluta, est deleniti fugit magni repudiandae quidem totam non. Asperiores non perferendis ea repellendus, similique nemo explicabo aspernatur perspiciatis animi aliquid assumenda nihil quod omnis voluptatem quos. Fugiat impedit omnis incidunt quas recusandae maiores dicta? Facere ullam dolore accusantium obcaecati neque explicabo, ducimus unde fugiat repellat. Tempore in aliquid debitis eos atque at optio dolor, nisi ab sed vel praesentium reprehenderit officia numquam cum ipsam cumque pariatur quasi accusantium deserunt exercitationem, nostrum sit beatae! Nam aperiam veniam quibusdam pariatur incidunt voluptate. Sunt necessitatibus eius magni distinctio debitis eaque veritatis harum ad. At officiis obcaecati ad saepe aperiam, fugiat explicabo hic aliquam nobis aliquid tempora doloribus molestias ex reprehenderit reiciendis sunt possimus soluta enim autem esse fuga repellendus rem odio! Ut sunt eum mollitia dolore quas amet sapiente ipsa quaerat nostrum assumenda blanditiis laudantium perferendis commodi incidunt, facilis fuga accusantium quidem. Iure ipsum blanditiis eius, dignissimos numquam tempora, earum delectus quidem sunt et, dolorum magnam.
+</div>
+  
+<ng-template #readmore>
+    <h2> Welcome to our page</h2>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis id quaerat dignissimos inventore fuga commodi vitae, possimus vero asperiores, maxime maiores eum neque? Vel possimus inventore officia eaque modi, dolorem amet sapiente distinctio accusamus reiciendis reprehenderit odio velit dolorum aperiam! Quidem commodi, quia odio a quam porro nihil omnis tempore, reiciendis iusto ullam minima asperiores eaque consequatur necessitatibus impedit sit provident incidunt nostrum quis quaerat rerum sunt laudantium. Commodi eos odio eveniet voluptatibus voluptates harum eius omnis debitis architecto! Dignissimos accusantium culpa voluptate iusto illo neque delectus nobis, beatae consectetur numquam ad eos quibusdam quae repellendus odit excepturi at non?
+</ng-template>
+<div class="btn">
+    <button (click)="showwarning()">READ MORE</button>
+</div> -->
+
+
+<div class="names">
+    <ul>
+        <li *ngFor="let name of names">
+            {{names}}
+        </li>
+    </ul>
+</div>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>index</th>
+        <th>Name</th>
+        <th>salary</th>
+        <th>age</th>
+        <th>country</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; index as i">
+            <td>{{i}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.country}}</td>  
+        </tr>
+    </tbody>
+</table>
