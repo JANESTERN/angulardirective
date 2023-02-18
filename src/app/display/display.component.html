@@ -1,0 +1,10 @@
+<div *ngIf="data.length>0; else nodata">
+    <div class="displaypersons" *ngFor="let person of data; let i=index" (click)="delete(i)" >
+      <h1 [ngClass]="{student:person.role==='student', staff:person.role==='Staff'}">{{person.name}}</h1>
+      <p>{{person.role}}</p>
+      <p>{{i}}</p>
+    </div>
+  </div>
+  <ng-template #nodata>
+    <p> No student or Staff. Add one</p>
+  </ng-template>

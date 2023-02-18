@@ -1,0 +1,14 @@
+.student{
+    background-color: rgb(255, 0, 195);
+    color: white;
+    padding: 10px;
+    width: 50%;
+}
+
+.staff{
+    background-color: rgb(30, 88, 212);
+    color: white;
+    padding: 10px;
+    width: 50%;
+
+}

@@ -1,0 +1,14 @@
+<div class="form_container">
+    <label for="Name">Name</label>
+    <input type="text" #name>
+    <label for="Position">Position</label>
+    <select #role>
+      <option value="student">Student</option>
+      <option value="Staff">Staff</option>
+    </select>
+  </div>
+  
+  <div class="btn">
+    <button (click)="Addperson(name,role)">Add Student</button>
+  </div>
+  

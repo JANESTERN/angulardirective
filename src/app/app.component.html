@@ -1,28 +1,6 @@
-<div class="form_container">
-  <label for="Name">Name</label>
-  <input type="text" #name>
-  <label for="Position">Position</label>
-  <select #role>
-    <option value="student">Student</option>
-    <option value="Staff">Staff</option>
-  </select>
-</div>
 
-<div class="btn">
-  <button (click)="Addperson(name,role)">Add Student</button>
-</div>
 
-<div *ngIf="data.length>0; else nodata">
-  <div class="displaypersons" *ngFor="let person of data; let i=index" (click)="delete(i)" >
-    <h1 [ngClass]="{student:person.role==='student', staff:person.role==='Staff'}">{{person.name}}</h1>
-    <p>{{person.role}}</p>
-    <p>{{i}}</p>
-  </div>
-</div>
-<ng-template #nodata>
-  <p> No student or Staff. Add one</p>
-</ng-template>
-<div [ngSwitch]="day">
+<!-- <div [ngSwitch]="day">
   <p *ngSwitchCase="1">Today is Monday</p>
   <p *ngSwitchCase="2">Today is Tuesday</p>
   <p *ngSwitchCase="3">Today is Wednesday</p>
@@ -33,4 +11,6 @@
   <p *ngSwitchDefault>wrong Input</p>
 </div>
 
-<app-directive></app-directive>
+<app-directive></app-directive> -->
+<app-add (sentdata)="Addperson($event)"></app-add>
+<app-display [data]="data"></app-display>
